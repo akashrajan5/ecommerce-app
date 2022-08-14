@@ -1,2 +1,2 @@
 # ecommerce-app
-React Native Ecommerce App
+Ecommerce app using React Native.
