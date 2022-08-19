@@ -42,6 +42,6 @@ const styles = StyleSheet.create({
       alignItems: 'center'
     },
     iconColor: {
-      color: '#fff'
+      color: '#000'
     }
 })
