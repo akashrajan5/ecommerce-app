@@ -1,11 +1,15 @@
 import React from "react";
 import {View, Text, StyleSheet} from "react-native";
+import {Header} from "../components/Header";
 
 export const Wishlist = () => {
   return(
-    <View style={styles.outerView}>
-      <Text>Wishlist</Text>
-    </View>
+    <>
+      <Header/>
+      <View style={styles.outerView}>
+        <Text>Wishlist</Text>
+      </View>
+    </>
   );
 }
 
