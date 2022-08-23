@@ -23,7 +23,10 @@ function Article() {
 
 export const DrawerComponent = () => {
     return(
-        <Drawer.Navigator screenOptions={{headerShown: false}}>
+        <Drawer.Navigator screenOptions={{
+            headerShown: false,
+            drawerActiveTintColor: '#000'
+            }}>
             <Drawer.Screen name="Homescreen" component={HomeScreen} />
             <Drawer.Screen name="Feed" component={Feed} />
             <Drawer.Screen name="Article" component={Article} />

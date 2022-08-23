@@ -3,13 +3,18 @@ import {useNavigation} from '@react-navigation/native';
 import {View, Text, StyleSheet, TouchableOpacity, StatusBar} from "react-native";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import {useDrawerStatus} from '@react-navigation/drawer';
+
 
 export const Header = () => {
   const navigation = useNavigation(); 
+  const isDrawerOpen = useDrawerStatus();
   return(
     <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.openDrawer()}>
-          <MaterialCommunityIcons style={styles.iconColor} name="menu" size={27} />{/*onclick change name="menu-open" */}
+          {isDrawerOpen === "open" ?
+            <MaterialCommunityIcons style={styles.iconColor} name="menu-open" size={27} />
+            : <MaterialCommunityIcons style={styles.iconColor} name="menu" size={27} />}
         </TouchableOpacity>
         <View style={styles.rightView}>
           <View style={{marginRight: 20}}>

@@ -12,9 +12,10 @@ export const HomeScreen = () => {
   return (
     <Tab.Navigator initialRouteName='Home' screenOptions={{
       tabBarInactiveTintColor: 'grey',
-      tabBarActiveTintColor: '#e91e63',
+      tabBarActiveTintColor: '#fff',
       headerShown: false,
-      tabBarShowLabel: false
+      tabBarShowLabel: false,
+      tabBarStyle: {borderTopLeftRadius: 30, borderTopRightRadius: 30, backgroundColor: '#000'}
     }}>
       <Tab.Screen name="Home" component={Home} options={{
         tabBarLabel: 'Home',
