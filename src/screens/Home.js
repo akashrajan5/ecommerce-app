@@ -74,7 +74,7 @@ export const Home = () => {
 
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 13, marginTop: 18,marginBottom: 8}}>
           <View>
-            <Text style={{fontSize: 30, fontWeight: '700', color: '#000'}}>New Arrivals</Text>
+            <Text style={{fontSize: 32, fontWeight: '700', color: '#000'}}>New Arrivals</Text>
           </View>
           <View>
             <TouchableOpacity style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -128,7 +128,7 @@ export const Home = () => {
 
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 13, marginTop: 18,marginBottom: 8}}>
           <View>
-            <Text style={{fontSize: 30, fontWeight: '700', color: '#000'}}>Best Selling</Text>
+            <Text style={{fontSize: 32, fontWeight: '700', color: '#000'}}>Best Selling</Text>
           </View>
           <View>
             <TouchableOpacity style={{flexDirection: 'row', alignItems: 'center'}}>

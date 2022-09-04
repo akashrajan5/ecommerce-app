@@ -5,18 +5,42 @@ import {HomeScreen} from './BottomTab';
 
 const Drawer = createDrawerNavigator();
 
-function Feed() {
+function NewCollection() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Feed Screen</Text>
+        <Text>New Collection Screen</Text>
       </View>
     );
 }
 
-function Article() {
+function Categories() {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Article Screen</Text>
+            <Text>Categories Screen</Text>
+        </View>
+    );
+}
+
+function Notifications() {
+    return (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Text>Notifications Screen</Text>
+        </View>
+    );
+}
+
+function Help() {
+    return (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Text>Help Screen</Text>
+        </View>
+    );
+}
+
+function AboutUs() {
+    return (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Text>About Us Screen</Text>
         </View>
     );
 }
@@ -27,9 +51,12 @@ export const DrawerComponent = () => {
             headerShown: false,
             drawerActiveTintColor: '#000'
             }}>
-            <Drawer.Screen name="Homescreen" component={HomeScreen} />
-            <Drawer.Screen name="Feed" component={Feed} />
-            <Drawer.Screen name="Article" component={Article} />
+            <Drawer.Screen name="Home" component={HomeScreen} />
+            <Drawer.Screen name="New Collections" component={NewCollection} />
+            <Drawer.Screen name="Categories" component={Categories} />
+            <Drawer.Screen name="Notifications" component={Notifications} />
+            <Drawer.Screen name="Help" component={Help} />
+            <Drawer.Screen name="About Us" component={AboutUs} />
         </Drawer.Navigator>
     );
 }
