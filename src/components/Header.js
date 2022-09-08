@@ -16,17 +16,10 @@ export const Header = () => {
             <MaterialCommunityIcons style={styles.iconColor} name="menu-open" size={27} />
             : <MaterialCommunityIcons style={styles.iconColor} name="menu" size={27} />}
         </TouchableOpacity>
-        <View style={styles.rightView}>
-          <View style={{marginRight: 20}}>
-            <TouchableOpacity>
-              <MaterialCommunityIcons style={styles.iconColor} name="message-badge" size={24} />
-            </TouchableOpacity>
-          </View>
-          <View>
-            <TouchableOpacity>
-              <MaterialCommunityIcons style={styles.iconColor} name="magnify" size={27} />
-            </TouchableOpacity>
-          </View>
+        <View>
+          <TouchableOpacity>
+            <MaterialCommunityIcons style={styles.iconColor} name="magnify" size={27} />
+          </TouchableOpacity>
         </View>
     </View>
   );
@@ -38,13 +31,9 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
-      paddingRight: 18,
+      paddingRight: 16,
       paddingLeft: 12,
       marginTop: StatusBar.currentHeight
-    },
-    rightView: {
-      flexDirection: 'row',
-      alignItems: 'center'
     },
     iconColor: {
       color: '#000'

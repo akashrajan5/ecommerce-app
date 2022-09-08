@@ -1,16 +1,16 @@
 import React from "react";
-import {View, Text, StyleSheet, Image, Pressable, TouchableOpacity, useWindowDimensions, ScrollView} from "react-native";
+import {View, Text, StyleSheet, Image, Pressable, TouchableOpacity, ScrollView} from "react-native";
 import {useNavigation} from "@react-navigation/native";
 import {Header} from "../components/Header";
+import { widthPercentageToDP as wp } from "react-native-responsive-screen";
 
 export const Cart = () => {
-  const {width, height} = useWindowDimensions();
   const navigation = useNavigation();
   return(
     <>
       <Header/>
       <View style={styles.outerView}>
-        <Image source={require('../assets/images/empty-cart.jpg')} style={{width: width, height: 500, resizeMode: 'contain'}} />
+        <Image source={require('../assets/images/empty-cart.jpg')} style={{width: wp('50%'), resizeMode: 'contain'}} />
         <TouchableOpacity>
           <Pressable onPress={() => navigation.navigate('Home')} style={styles.shopNow}><Text style={{color: '#fff', fontSize: 15}}>Shop Now</Text></Pressable>
         </TouchableOpacity>
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   shopNow: {
     backgroundColor: '#000',
     paddingVertical: 15,
-    paddingHorizontal: 55,
+    paddingHorizontal: 50,
     borderRadius: 15
   }
 })

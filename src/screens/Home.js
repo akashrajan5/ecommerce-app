@@ -1,76 +1,23 @@
 import React, {useState} from "react";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {View, Text, StyleSheet, ImageBackground, StatusBar, TouchableOpacity, Image, ScrollView} from "react-native";
+import {View, Text, StyleSheet, ImageBackground, StatusBar, TouchableOpacity, Image, ScrollView, useWindowDimensions} from "react-native";
 import {Header} from "../components/Header";
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export const Home = () => {
+  const {width, height} = useWindowDimensions();
   const [liked, setLiked] = useState(false)
 
   return(
     <>
       <StatusBar barStyle='dark-content' backgroundColor="transparent" translucent={true} />
-      <ScrollView stickyHeaderIndices={[0]}>
+      <ScrollView>
         <Header />
-        <ImageBackground source={require('../assets/images/cover.png')} style={styles.coverImageStyle}>
+        <ImageBackground source={require('../assets/images/cover.png')} style={{width: width, height: hp('35%')}}>
           <View style={{flex: 1, justifyContent: 'center',marginLeft: 30}}>
             <Text style={styles.coverText}>Make yourself{'\n'}at home</Text>
           </View>
         </ImageBackground>
-
-
-        <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 13, marginTop: 18,marginBottom: 8}}>
-          <View>
-            <Text style={{fontSize: 32, fontWeight: '700', color: '#000'}}>Categories</Text>
-          </View>
-          <View>
-            <TouchableOpacity style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Text style={{fontSize: 13,fontWeight: '700', color: '#000'}}>Show all</Text>
-              <MaterialCommunityIcons name="menu-right" size={22} />
-            </TouchableOpacity>
-          </View>
-        </View>
-
-        <View>
-          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-            <TouchableOpacity>
-              <View style={styles.categoryPill}>
-                <Text style={{color: '#fff'}}>All Categories</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <View style={styles.categoryPill}>
-                <Text style={{color: '#fff'}}>Mens</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <View style={styles.categoryPill}>
-                <Text style={{color: '#fff'}}>Womens</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <View style={styles.categoryPill}>
-                <Text style={{color: '#fff'}}>Kids</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <View style={styles.categoryPill}>
-                <Text style={{color: '#fff'}}>T-Shirts</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <View style={styles.categoryPill}>
-                <Text style={{color: '#fff'}}>Jeans</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <View style={styles.lastCategoryPill}>
-                <Text style={{color: '#fff'}}>Accessories</Text>
-              </View>
-            </TouchableOpacity>
-          </ScrollView>
-        </View>
-
 
         <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 13, marginTop: 18,marginBottom: 8}}>
           <View>
@@ -122,6 +69,74 @@ export const Home = () => {
                 <Text style={styles.prodPrice}>$109.60</Text>
               </View>
             </View>
+          </ScrollView>
+        </View>
+
+        
+        <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 13, marginTop: 18,marginBottom: 8}}>
+          <View>
+            <Text style={{fontSize: 32, fontWeight: '700', color: '#000'}}>Categories</Text>
+          </View>
+          <View>
+            <TouchableOpacity style={{flexDirection: 'row', alignItems: 'center'}}>
+              <Text style={{fontSize: 13,fontWeight: '700', color: '#000'}}>Show all</Text>
+              <MaterialCommunityIcons name="menu-right" size={22} />
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        <View>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <TouchableOpacity>
+              <View style={styles.categoryPill}>
+                <Text style={{color: '#fff'}}>All Categories</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.categoryPill}>
+                <Text style={{color: '#fff'}}>Mens</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.categoryPill}>
+                <Text style={{color: '#fff'}}>Womens</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.categoryPill}>
+                <Text style={{color: '#fff'}}>Kids</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.categoryPill}>
+                <Text style={{color: '#fff'}}>T-Shirts</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.categoryPill}>
+                <Text style={{color: '#fff'}}>Jeans</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.categoryPill}>
+                <Text style={{color: '#fff'}}>Casuals</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.categoryPill}>
+                <Text style={{color: '#fff'}}>Coats</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.categoryPill}>
+                <Text style={{color: '#fff'}}>Shoes</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.lastCategoryPill}>
+                <Text style={{color: '#fff'}}>Accessories</Text>
+              </View>
+            </TouchableOpacity>
           </ScrollView>
         </View>
 
@@ -186,10 +201,6 @@ export const Home = () => {
 }
 
 const styles = StyleSheet.create({
-  coverImageStyle: {
-    width: wp('100%'),
-    height: hp('35%')
-  },
   coverText: {
     fontSize: 48,
     fontWeight: '700',

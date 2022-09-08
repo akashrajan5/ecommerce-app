@@ -17,17 +17,17 @@ export const HomeScreen = () => {
       tabBarShowLabel: false,
       tabBarStyle: {borderTopLeftRadius: 30, borderTopRightRadius: 30, backgroundColor: '#000'}
     }}>
-      <Tab.Screen name="Home" component={Home} options={{
+      <Tab.Screen name="Homescreen" component={Home} options={{
         tabBarLabel: 'Home',
-        tabBarIcon: ({color, focused}) => {return <MaterialCommunityIcons name="home" color={color} size={25} />}
+        tabBarIcon: ({color, focused}) => {return <MaterialCommunityIcons name="home-outline" color={color} size={25} />}
       }} />
       <Tab.Screen name="Wishlist" component={Wishlist} options={{
         tabBarLabel: 'Wishlist',
-        tabBarIcon: ({color}) => {return <MaterialCommunityIcons name="heart" color={color} size={25} />}
+        tabBarIcon: ({color}) => {return <MaterialCommunityIcons name="cards-heart-outline" color={color} size={25} />}
       }} />
       <Tab.Screen name="Cart" component={Cart} options={{
         tabBarLabel: 'Cart',
-        tabBarIcon: ({color}) => {return <MaterialCommunityIcons name="cart" color={color} size={25} />}
+        tabBarIcon: ({color}) => {return <MaterialCommunityIcons name="cart-variant" color={color} size={25} />}
       }} />
       <Tab.Screen name="Profile" component={Profile} options={{
         tabBarLabel: 'Profile',
